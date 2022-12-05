@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Better Health</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+                integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+        <script>
+
+            function switchMode() {
+                let moon = document.getElementById("moon");
+                if (moon.className == "moon") {
+                    moon.className = "sun";
+                    document.body.style.backgroundColor = "#141D26";
+                    document.body.style.color = "#fff";
+                } else {
+                    moon.className = "moon";
+                    document.body.style.backgroundColor = "#fff";
+                    document.body.style.color = "#000";
+                }
+            }
+            
+          
+            
+            $(function(){
+                n=new Date();
+                y= n.getFullYear();
+                m=n.getMonth()+1;
+                d=n.getDate();
+                document.getElementById("date").innerHTML=d+"/"+m+"/"+y;
+            });
+            
+           
+      $( function() {
+    $( "#accordion" ).accordion({
+        "animate":true,
+        "collapsible":true
+    });
+             
+
+});
+
+
+        </script>
+       
+    </head>
+    <body>
+       
+            <div class="logo">
+                <a href="index.html"><img src="images/icon.PNG" alt="icon"/></a>
+            </div>
+       
+            <nav class="nav">
+            <ul>
+                <li><a href="index.html"class="open-menu">Home </a></li>
+            
+                    
+              <li><a href="bmi.html">Calculate BMI</a>
+              </li>
+                     
+                <li><a href="map.html">Google Map</a></li>
+                <li> <a href="registration.html">Membership/Registration</a></li>
+
+                <a href="#"><div class="night-toggle" onClick="switchMode()"></a>
+                <div id="moon" class="moon"></div>
+            </div>
+            <!-- optional -->
+            <div class="opt">
+                <div class="break"></div>
+            </div>
+            </ul>
+                
+            </nav>
+        
+            <div class="grid-container">
+                <span>
+                   <img class="img" src="images/hero6.jpg" alt="hero"/>
+                    <img class="img1" src=images/hero5.jpg alt="hero1"/>
+                   </span>
+                
+        </div>
+                <div id="accordion">
+                          <label>
+                <h3>Why with us?</h3>
+            </label>
+               <div>
+               <p>Get ideas for fun outdoor activities for adults and kids all listed in one place for you to compare<br> and choose.
+These activities aim to inspire you with things to do outdoors socially and have <br>a laugh with your friends, family or your outdoor tribe.
+<br>The list of activities is updated weekly, so be sure to come back and find something<br> different to try for fun outdoors..</p>
+               </div>
+               
+               <label>
+                   <h3>What activities we provide?</h3>
+               </label>
+               <div>
+                   <ul class="accordion1">
+                       <li>Hiking</li>
+                       <li>Swimming</li>
+                       <li>Running marathon</li>
+                       <li>Eldery activities</li>
+                       <li>Camping</li>
+                   </ul>   
+               </div>
+               <label>
+                   <h3>What are the benefits of being outdoors?</h3>
+               </label>
+               <div>
+                   <p>There is also evidence that being outdoors can help reduce fatigue,
+                       stress, and depression in people of <br>all ages.People with mental 
+                       health disorders often find it hard<br> to engage in social activities 
+                       because they lack motivation or energy. 
+                       <br> Low motivation and energy is a common symptom of mental illness.</p>
+               </div>
+                    
+                   <label>
+                       <h3>Where you can find Us</h3>
+                   </label>
+                   <div>
+                       <p>We are located in different towns such as Nenagh, Birr, Athlone the principal office its located in the<br> heart of Limerick</p>
+                   </div>
+               </div>
+                
+               
+            <div id="carousel">
+                    <img src="images/arrow_left.png" alt="Left arrow" class="arrow" id="left-arrow">
+                    <img src="images/arrow_right.png" alt="right arrow" class="arrow" id="right-arrow">
+                    <div class="slide-image" id="slide1"></div>
+                    <div class="slide-image" id="slide2"></div>
+                    <div class="slide-image" id="slide3"></div>
+                </div>
+           
+                
+                <footer class="footer">
+         
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+         <li class="menu__item"><a class="menu__link" href="login.html">Login</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact US</a></li>
+      <li class="menu__item"><a class="menu__link" href="admin.html">Admin Area</a></li>
+      <li class="menu__item"><a class="menu__link" href="registration.html">Registration Page</a></li>
+        <div class="search-container">
+                  <form action="/search" method="get">
+                    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                    <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+                  </form>
+                </div>
+      
+      
+
+    </ul>
+    <p>&copy;2022 BetterHealth | All Rights Reserved</p>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+              
+                    <address>
+                        <div class="address"><h1 class="h1">Written by K00274622</h1></div>
+                        <p id="date"></p>
+                    </address>
+
+                </footer>
+            
+                   <script src="carosel.js"></script>
+    </body>
+</html>

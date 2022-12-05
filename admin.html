@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Better Health</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/admin.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+                integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+        <script>
+         $(function(){
+                n=new Date();
+                y= n.getFullYear();
+                m=n.getMonth()+1;
+                d=n.getDate();
+                document.getElementById("date").innerHTML=d+"/"+m+"/"+y;
+            });
+        </script>
+         </head>
+    <body>
+       
+            <div class="logo">
+                <a href="index.html"><img src="images/icon.PNG" alt="icon"/></a>
+            </div>
+       
+            <nav class="nav">
+            <ul>
+                <li><a href="index.html"class="open-menu">Home </a></li>
+            
+                    
+              <li><a href="bmi.html">Calculate BMI</a>
+              </li>
+                     
+                <li><a href="map.html">Google Map</a></li>
+                <li> <a href="registration.html">Membership/Registration</a></li>
+
+                <a href="#"><div class="night-toggle" onClick="switchMode()"></a>
+                <div id="moon" class="moon"></div>
+            </div>
+            <!-- optional -->
+            <div class="opt">
+                <div class="break"></div>
+            </div>
+            </ul>
+                
+            </nav>
+        
+        
+         <div class="container">
+<div class="main">
+<h2>Admin login</h2>
+<form id="form_id" method="post" name="myform">
+<input type="text" name="username" id="username" placeholder="Admin number"/>
+<input type="password" name="password" id="password" placeholder="Password"/>
+     
+   
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+    <span><b class="note">Note : </b>For this demo use your knumber and password.</span>
+</div>
+             <div class="image">
+             <img src="images/admin.jpg" alt="admin">
+             </div>
+</div>
+        
+        
+        
+           <footer class="footer">
+         
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+         <li class="menu__item"><a class="menu__link" href="login.html">Login</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact US</a></li>
+      <li class="menu__item"><a class="menu__link" href="login.html">Admin Area</a></li>
+      <li class="menu__item"><a class="menu__link" href="registration.html">Registration Page</a></li>
+        <div class="search-container">
+                  <form action="/search" method="get">
+                    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                    <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+                  </form>
+                </div>
+      
+      
+
+    </ul>
+    <p>&copy;2022 BetterHealth | All Rights Reserved</p>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+              
+                    <address>
+                        <div class="address"><h1 class="h1">Written by K00274622</h1></div>
+                        <p id="date"></p>
+                    </address>
+
+                </footer>
+            
+                  
+    </body>
+    <script src="admin.js"></script>
+</html>

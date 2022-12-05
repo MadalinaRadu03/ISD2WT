@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Google Map</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/map.css">
+    </head>
+   <script>
+    
+     function switchMode() {
+                let moon = document.getElementById("moon");
+                if (moon.className == "moon") {
+                    moon.className = "sun";
+                    document.body.style.backgroundColor = "#141D26";
+                    document.body.style.color = "#fff";
+                } else {
+                    moon.className = "moon";
+                    document.body.style.backgroundColor = "#fff";
+                    document.body.style.color = "#000";
+                }
+            }
+            
+    </script>
+    <body>
+          <div class="logo">
+                <a href="index.html"><img src="images/icon.PNG" alt="icon"/></a>
+            
+       
+            <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="map.html">Google Map</a></li>
+                <li> <a href="registration.html">Membership/Registration</a></li>
+
+                <a href="#"><div class="night-toggle" onClick="switchMode()"></a>
+                <div id="moon" class="moon"></div>
+            </div>
+            <!-- optional -->
+            <div class="opt">
+                <div class="break"></div>
+            </div>
+            </ul>
+                
+            </nav>
+    <center>
+        <h1>View our location</h1>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38706.99828537717!2d-8.650923679778305!3d52.67465376608004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b5d7cb9eb78ed%3A0x5a0c99596325bc44!2sSports%2C%20out%20door%20activities!5e0!3m2!1sen!2sie!4v1669803076125!5m2!1sen!2sie" width="1200" height="700" style="border:0;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </center>
+    
+    </body>
+</html>

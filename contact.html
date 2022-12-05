@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/contact.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script>
+        
+    $(function () {
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    })       
+     function switchMode() {
+                let moon = document.getElementById("moon");
+                if (moon.className == "moon") {
+                    moon.className = "sun";
+                    document.body.style.backgroundColor = "#141D26";
+                    document.body.style.color = "#fff";
+                } else {
+                    moon.className = "moon";
+                    document.body.style.backgroundColor = "#fff";
+                    document.body.style.color = "#000";
+                }
+            }
+    
+    
+       </script>
+</head>
+<body>
+    
+ <div class="logo">
+                <a href="index.html"><img src="images/icon.PNG" alt="icon"/></a>
+            </div>
+       
+            <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="bmi.html">Calculate BMI</a></li>
+                <li><a href="map.html">Google Map</a></li>
+                <li> <a href="registration.html">Membership/Registration</a></li>
+
+                <a href="#"><div class="night-toggle" onClick="switchMode()"></a>
+                <div id="moon" class="moon"></div>
+            </div>
+            <!-- optional -->
+            <div class="opt">
+                <div class="break"></div>
+            </div>
+            </ul>
+                
+            </nav>
+
+   <div id=overlay>
+       <form onsubmit="event.preventDefault(); validateForm()">
+       <h1>Contact Us</h1>
+           <label> Name:</label>
+           <input type="text" id="name" placeholder="Enter your name">
+           <small class="error"></small>
+           
+           <label> Email:</label>
+           <input type="text" id="email" placeholder="example@gmail.com">
+           <small class="error"></small>
+           
+           <label> Message:</label>
+           <textarea id="message" placeholder="your message" rows="6"></textarea>
+           <small class="error"></small>
+           
+           <div class="center">
+           <input type="submit" value="Send Message">
+               <p id="success"></p>
+           </div>
+       </form>
+       
+    </div>
+            
+
+ <footer class="footer">
+         
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact US</a></li>
+      <li class="menu__item"><a class="menu__link" href="login.html">Admin Area</a></li>
+      <li class="menu__item"><a class="menu__link" href="registration.html">Registration Page</a></li>
+    </ul>
+    <p>&copy;2022 BetterHealth | All Rights Reserved</p>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+              
+                    <address>
+                        <div class="address"><h1 class="h1">Written by K00274622</h1></div>
+                        <p id="date"></p>
+                    </address>
+
+                </footer>
+<script src="contact.js"></script>
+    </body>
+</html>
+ 
