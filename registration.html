@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Registration Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/register.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script>
+        
+     function switchMode() {
+                let moon = document.getElementById("moon");
+                if (moon.className == "moon") {
+                    moon.className = "sun";
+                    document.body.style.backgroundColor = "#141D26";
+                    document.body.style.color = "#fff";
+                } else {
+                    moon.className = "moon";
+                    document.body.style.backgroundColor = "#fff";
+                    document.body.style.color = "#000";
+                }
+            }
+        
+         $(function () {
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    }) ;
+    $(function(){
+        $("#submit").click(function)
+        var email=$("#email").val();
+        var password=$("#password").val();
+        
+        if(email.indexOf("@")<0 || email.indexOf(".")<0){
+            alert("invalid email");
+            return;
+        }
+        
+        if(!(password.length>=5 && password<=16)){
+            alert("password most be between 5 and 16 characteres");
+            return;
+        }
+        document.write("your validation its successed")
+    });
+
+    
+       </script>
+</head>
+<body>
+     <div class="logo">
+                <a href="index.html"><img src="images/icon.PNG" alt="icon"/></a>
+            </div>
+       
+            <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="bmi.html">Calculate BMI</a></li>
+                <li><a href="map.html">Google Map</a></li>
+                <li> <a href="registration.html">Membership/Registration</a></li>
+
+                <a href="#"><div class="night-toggle" onClick="switchMode()"></a>
+                <div id="moon" class="moon"></div>
+            </div>
+            <!-- optional -->
+            <div class="opt">
+                <div class="break"></div>
+            </div>
+            </ul>
+                
+            </nav>
+
+   <div>
+                <h1 class="main-title">Join us!!</h1>
+                <form action="register.html" method="get" name="member_form" id="member_form">
+                    <fieldset>
+                        <legend>Registration Information</legend>
+                        <div id="formInput">
+                            <label for="email">Email Address:</label>
+                            <input type="text" id="email" name="email">
+                            <span>*</span>
+                        </div>
+                        <div id="formInput">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="password">
+                            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;" onclick="myFunction()"></i>
+           <script>                    
+            function myFunction() {
+              var x = document.getElementById("formInput");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }           
+            </script>
+                            <span>*</span>
+                        </div>
+                        <div id="formInput">
+                            <label for="verify"> Verify Password:</label>
+                            <input type="password" id="password" name="password" name="verify">
+                            <span>*</span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Member Information</legend>
+                        <div id="formInput">
+                            <legend>Member Information</legend>
+                            <div id="formInput">
+                                <label>Membership type:</label>
+                                <input type="radio" name="type" id="individual" value="individual">
+                                <input type="radio" name="type" id="corporate" value="corporation">
+                            </div>
+                        </div>
+                        <div id="formInput">
+                            <label for="company_name">Company name:</label>
+                            <input type="text" id="company_name" name="company_name">
+                            <span></span>
+                        </div>
+                        <div id="formInput">
+                            <label for="first_name">First name:</label>
+                            <input type="text" id="first_name" name="first_name">
+                            <span>*</span>
+                        </div>
+                        <div id="formInput">
+                            <label for="last_name">Last name:</label>
+                            <input type="text" id="last_name" name="last_name">
+                            <span>*</span>
+                        </div>
+                        <div id="formInput">
+                            <label for="phone">Phone number:</label>
+                            <input type="text" id="phone" name="phone" placeholder="999-9999999">
+                            <span></span>
+                        </div>
+
+                    </fieldset>
+                    <fieldset id="buttons">
+                        <legend>Submit your membership</legend>
+                        <div>
+                            <label>&nbsp</label>
+                            <input type="submit" id="submit" name="submit" value="Submit">
+                            <input type="reset" id="reset" name="reset" value="Reset">
+                        </div>
+                    </fieldset>
+                     
+            </div>
+           <script>                    
+            function myFunction() {
+              var x = document.getElementById("formInput");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }           
+                    </script>
+          
+       
+
+                <footer class="footer">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact US</a></li>
+      <li class="menu__item"><a class="menu__link" href="admin.html">Admin Area</a></li>
+      <li class="menu__item"><a class="menu__link" href="registration.html">Registration Page</a></li>
+      
+      
+
+    </ul>
+    <p>&copy;2022 BetterHealth | All Rights Reserved</p>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+              
+                    <address>
+                        <div class="address"><h1 class="h1">Written by K00274622</h1></div>
+                        <p id="date"></p>
+                    </address>
+
+                </footer>
+        </div>
+
+    </body>
+</html>
