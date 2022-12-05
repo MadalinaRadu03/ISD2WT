@@ -1,0 +1,105 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 30 Nov 2022, 10:19:23
+    Author     : k00274622
+*/
+   body{
+           
+       
+    padding:0;
+    margin:0;
+    background-color:white;
+    transition: 1.5s;
+}
+
+
+nav {
+    width:100%;
+    background-color:#0e7156;
+    overflow:auto;
+}
+.nav ul{
+    padding:0;
+    margin:0 0 0 150px;
+    list-style: none;
+}
+ .nav li{
+    float:left;
+    margin:28px;
+}
+.logo img{
+    position:absolute;
+    margin-top:29px;
+   
+}
+
+ .nav a{
+    width:100px;
+    display:block;
+    margin:0px;
+    padding: 6px 4px;
+    text-decoration: none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align: center;
+}
+a:hover{
+    background-color: grey;
+    transition:0.5s;
+    text-transform: uppercase;
+}
+                
+
+img{
+    max-width: 100%;
+}
+h1{
+    color:black;
+}
+.night-toggle {
+width: 33px;
+height: 33px;
+right: 20px;
+top: 20px;
+position: absolute;
+}
+.night-toggle:hover{
+cursor: pointer;
+}
+.moon {
+background-color: transparent;
+box-shadow: -6px 1px 0 3px #275e8e;
+border-left:3px solid #27476D;
+border-radius:50%;
+width: 20px;
+height: 20px;
+margin-left:8px;
+margin-top:0px;
+transition: 2s;
+}
+.sun {
+background-color: #fdd462;
+box-shadow: 2px 0px 0px 1px #D19C29;
+border-radius:50%;
+width: 26px;
+height: 26px;
+transition: 2s;
+}
+/* ----- optional ----- */
+.break {
+flex-basis: 100%;
+height: 0;
+}
+.opt {
+display: flex;
+flex-wrap: wrap;
+justify-content:center;
+font-family: sans-serif;
+margin-top:5%;
+text-align:center;
+}
+
+
